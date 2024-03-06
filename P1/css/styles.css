@@ -2,6 +2,7 @@
 body{
     color:#ffffff;
     background-color: #806d61;
+    font-family: "Titillium Web", sans-serif;
 }
 
 
@@ -21,6 +22,7 @@ body{
 }
 
 .titulo{
+    font-family: "Amaranth", sans-serif;
     align-items: center;
     text-align: center;
     font-size: 64px;
@@ -45,6 +47,7 @@ body{
     
 }
 .menu_item a{
+    font-family: "Titillium Web", sans-serif;
     color: #2c2c2c;
     text-decoration: none;
     padding: 5px;
@@ -59,7 +62,7 @@ body{
 }
 
 .menu_item button {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     background-color: #c5baaa;
     color: #2c2c2c;
@@ -81,6 +84,7 @@ body{
     border: none;
 }
 .menu_item:hover .submenu {
+    font-family: "Titillium Web", sans-serif;
     display: block;
 }
 /* SUBMENU (BARRA DESPLEGABLE)*/
