@@ -8,7 +8,7 @@ var botonSubmit=document.getElementById("submit")
 //Funciones
 //Funcion que comprueba mediante expresiones regulares si el formato del email es correcto y si no esta vacio
 function comprobarEmail(email){
-    if(email!="" && email.search(/^([0-9a-z\.\_]+)+@{1}([0-9a-z]+\.)+[0-9a-z]+$/i)!=-1) // Esto lo he copiado
+    if(email!="" && email.search(/^([0-9a-z\.\_]+)+@{1}([0-9a-z]+\.)+[0-9a-z]+$/i)!=-1)
         return true
     else
         return false
@@ -89,7 +89,7 @@ function subirComentario(){
 
     if(nombre.value!="" && comprobarEmail(email.value) && comentarioNuevo.value!=""){
         //Se inserta el nuevo comentario justo debajo del final de la caja para crear uno.
-        comprobarPalabrotas(); // Por si la ultima palabra es una palabrota
+        filtroPalabras(); // Por si la ultima palabra es una palabrota
         //InnerHTML para crear un nuevo comentario
         template.innerHTML="<div class=\"nombre-comentario\">"+
                                 nombre.value+
@@ -113,13 +113,17 @@ function subirComentario(){
 }
 
 //Funcion que comprueba palabrotas de un array de strings
-function comprobarPalabrotas(){
+function filtroPalabras(){
     var texto=document.getElementById("comentario-nuevo");
-    var palabrotas=["palabrota", "imbecil", "terrible", "caca", "patada", "blanco", "pruebame", "fiesta", "malo", "corcholis"]
+    var palabras=["muere", "imbecil", "puta", "mierda", "joder", "zorra", "idiota", "tonto", "culo"]
 
-    palabrotas.forEach(
-        (aux)=>{       
-            texto.value=texto.value.replace(new RegExp(aux, "ig"), "*".repeat(aux.length))
+    // Filtramos las palabras de la siguiente forma: idiota => i*****
+    palabras.forEach(
+        (aux)=>{
+            let regex = new RegExp(aux,"ig");
+            texto.value = texto.value.replace(regex, (match) => {
+                return match[0]+ "*".repeat(match.length - 1);
+            });
         }
     )
 }
@@ -127,4 +131,4 @@ function comprobarPalabrotas(){
 // Los listener
 botonComentarios.addEventListener("click", expandirComentarios);
 botonSubmit.addEventListener("click", subirComentario);
-zonaTextoNuevoComentario.addEventListener("keypress", comprobarPalabrotas)
+zonaTextoNuevoComentario.addEventListener("keypress", filtroPalabras)

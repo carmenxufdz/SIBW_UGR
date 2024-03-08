@@ -1,5 +1,5 @@
-/* DESPLEGABLE QUE INCLUYE CAJA Y BOTÓN */
 #desplegable{
+    /* El desplegable incluye a la caja de los comentarios y el boton */
     position:fixed;
     height: 100%;
     top: 0;
@@ -9,27 +9,35 @@
 }
 
 #caja-comentarios{
-    width: min(600px, 50vw);
+    color:#2c2c2c;
+    width: min(600px, 55vw);
     display: grid;
     grid-auto-rows: max-content;
     grid-auto-columns: 100%;
     gap: 0.7vh;
     overflow: hidden auto;
     background-color: #c5baaa;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
 }
+
 
 .menu-boton{
     align-self: center;
 }
 
+.menu-boton img{
+    width: 150%;
+}
+
 #boton-comentario{
-    width: min(75px, 20vw);
+    width: min(60px, 20vw);
     background-color: transparent;
     border: 0;
 }
 
 /* Container generico de los comentarios */
 .comentario-container{
+    color: #ffffff;
     border-radius: 0.5vh;
     border: solid 1px #2c2c2c;    
     margin: 10px;
@@ -48,9 +56,9 @@
 }
 
 .contenido-comentario{
+    color: #2c2c2c;
     padding: 10px;
     text-align: justify;
-    color : black;
     background-color: white;
     border-bottom-left-radius: 0.5vh;
     border-bottom-right-radius: 0.5vh;
@@ -58,15 +66,8 @@
 
 #submit-comentario{
     padding: 2%;
-    background-color: #c5baaa;
+    background-color: #c5baaa;;
 }
-
-#submit-comentario button{
-    background-color: #ee7828;
-    color : white;
-
-}
-
 
 .fecha{
     text-align: center;
@@ -98,7 +99,3 @@ button{
     margin-bottom: 5px;
 }
 
-.logo-comentarios{
-    /* con width% limitamos el tamaño al del container */
-    width: 120%;
-}
