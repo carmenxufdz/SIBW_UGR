@@ -10,12 +10,13 @@
 }
 
 .grid_item {
+    display: flex;
+    flex-direction: column;
     padding:5%;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    height: auto;
     box-sizing: border-box;
-    position: relative;
     background-size: cover;
 }
 
@@ -23,18 +24,13 @@
     width: 100%;
     height: auto;
     margin: 0px;
-    box-sizing: border-box;
-    object-fit: cover;
 }
 
 .grid_item p {
     display: block;
-    padding: 5px;
+    justify-content:end;
     text-align: center;
     background-color: #c5baaa;
     color: #2c2c2c;
-    position: absolute;
-    top: 88%;
-    width: 90%;
-    box-sizing: border-box;
+    width: 100%;
 }
