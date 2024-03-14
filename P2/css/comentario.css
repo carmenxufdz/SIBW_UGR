@@ -12,8 +12,6 @@
     color:#2c2c2c;
     width: min(600px, 55vw);
     display: grid;
-    grid-auto-rows: max-content;
-    grid-auto-columns: 100%;
     gap: 0.7vh;
     overflow: hidden auto;
     background-color: #c5baaa;
@@ -82,10 +80,6 @@ input{
 
 button{
     cursor: pointer;
-}
-
-.ancho{
-    width: 60%;
 }
 
 #comentario-nuevo{
