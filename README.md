@@ -53,7 +53,7 @@ El objetivo de esta práctica es el diseño de un espacio para comentarios que l
 * Al pulsar el botón de enviar, antes de incluir el texto del comentario se comprobará que todos los campos han sido rellenados. En caso negativo se avisará y no se incluirá el comentario. Además se realizará una validación de email
 * Conforme el usuario escribe el comentario, el sistema detectará mediante JavaScript la apariciónde palabras "prohibidas". Cada uno de los caracteres de cada palabra prohibida se sustituirá por un * en tiempo de escritura
 
-Para la resolución de esta práctica, tuve que crear e implementar un nuevo CSS con toda la estructura de la sección de comentarios. Para abrir y cerrar la sección, existe un botón "flotante" que se mantendrá a la izquierda de la página, a la derecha de la sección de comentarios.
+Para la resolución de esta práctica, tuve que crear e implementar un nuevo CSS con toda la estructura de la sección de comentarios. Para abrir y cerrar la sección, existe un botón "flotante" que se mantendrá a la izquierda de la página, a la derecha de la sección de comentarios y que al pulsarlo, activará la siguiente función.
 
 ```
 function expandirComentarios(){
@@ -67,5 +67,72 @@ function expandirComentarios(){
     }
 }
 ```
+En el archivo comentario.js implemento las funciones necesarias para realizar las tareas propuestas
+```
+function comprobarEmail(email){
+    if(email!="" && email.search(/^([0-9a-z\.\_]+)+@{1}([0-9a-z]+\.)+[0-9a-z]+$/i)!=-1)
+        return true
+    else
+        return false
+}
+
+//Funcion que sirve para añadir un nuevo comentario
+function subirComentario(){
+    var nombre=document.getElementById("nombre")
+    var email=document.getElementById("email")
+    var comentarioNuevo=document.getElementById("comentario-nuevo")
+
+    var comentarios=document.getElementsByClassName("comentario-container")
+    // copio la estructura del comentario
+    var template=comentarios[0].cloneNode(true)
+
+
+    if(nombre.value!="" && comprobarEmail(email.value) && comentarioNuevo.value!=""){
+        //Se inserta el nuevo comentario justo debajo del final de la caja para crear uno.
+        filtroPalabras(); // Por si la ultima palabra es una palabrota
+        //InnerHTML para crear un nuevo comentario
+        template.innerHTML="<div class=\"nombre-comentario\">"+
+                                nombre.value+
+                            "</div>"+
+                            "<div class=\"comentario-email\">"+
+                                email.value+
+                            "</div>"+
+                            "<div class=\"fecha\">"+
+                                obtenerFechaActual()+
+                            "</div>"+
+                            "<div class=\"contenido-comentario\">"+
+                                comentarioNuevo.value+
+                            "</div>";
+
+        document.getElementById("caja-comentarios").insertBefore(template, comentarios[comentarios.length])
+        nombre.value=email.value=comentarioNuevo.value="" // reseteo
+    }
+    else{
+        alert("Uno o varios campos están vacíos o son inválidos")
+    }
+}
+
+//Funcion que comprueba palabrotas de un array de strings
+function filtroPalabras(){
+    var texto=document.getElementById("comentario-nuevo");
+    var palabras=["muere", "imbecil", "puta", "mierda", "joder", "zorra", "idiota", "tonto", "culo"]
+
+    // Filtramos las palabras de la siguiente forma: idiota => i*****
+    palabras.forEach(
+        (aux)=>{
+            let regex = new RegExp(aux,"ig");
+            texto.value = texto.value.replace(regex, (match) => {
+                return match[0]+ "*".repeat(match.length - 1);
+            });
+        }
+    )
+}
+
+// Los listener
+botonComentarios.addEventListener("click", expandirComentarios);
+botonSubmit.addEventListener("click", subirComentario);
+zonaTextoNuevoComentario.addEventListener("keypress", filtroPalabras)
+```
+Decidí poner el formulario para enviar comentarios al principio, pues no era capaz de que el comentario nuevo se añadiese al final de los anteriores y encima del formulario... Además me he tomado la libertad de que el formato de las palabras prohibidas, en vez de que se muestre cada caracter con *, se mostrará el primer caracter seguido de los siguientes, éstos si transformados a *
 
 ![Imprimi](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P2/comentario.jpg)
