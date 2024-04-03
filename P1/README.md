@@ -1,4 +1,4 @@
-## Práctica 1: HTML y CSS
+# Práctica 1: HTML y CSS
 El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a saber:
 
 * portada.html: La portadad de un sitio web que muestre información sobre posibles actividades en la montaña. El aspecto de la página debe ser similar al planteado en la figura 1:

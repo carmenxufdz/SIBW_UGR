@@ -1,4 +1,4 @@
-## Práctica 2: Javascript
+# Práctica 2: Javascript
 El objetivo de esta práctica es el diseño de un espacio para comentarios que los usuarios del sitio pueden hacer asociados a cada uno de las actividades mostradas en el sitio. Debe tener la siguiente funcionalidad:
 * El panel de comentarios debe estar oculto en un lateral, y desplegarse al pulsar un botón
 * Cuando se despliegue, deberá contar con dos comentarios predefinidos (como si hubieran sido introducidos por usuarios anteriores)
