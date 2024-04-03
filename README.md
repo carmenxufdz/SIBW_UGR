@@ -67,68 +67,8 @@ function expandirComentarios(){
     }
 }
 ```
-En el archivo comentario.js implemento las funciones necesarias para realizar las tareas propuestas
+En el archivo comentario.js implemento las funciones necesarias para realizar las tareas propuestas. Para que los elementos de la página reaccionasen según el código implementado, había que "asociarles" a los elementos deseados, las funciones necesarias a través de listeners
 ```
-function comprobarEmail(email){
-    if(email!="" && email.search(/^([0-9a-z\.\_]+)+@{1}([0-9a-z]+\.)+[0-9a-z]+$/i)!=-1)
-        return true
-    else
-        return false
-}
-
-//Funcion que sirve para añadir un nuevo comentario
-function subirComentario(){
-    var nombre=document.getElementById("nombre")
-    var email=document.getElementById("email")
-    var comentarioNuevo=document.getElementById("comentario-nuevo")
-
-    var comentarios=document.getElementsByClassName("comentario-container")
-    // copio la estructura del comentario
-    var template=comentarios[0].cloneNode(true)
-
-
-    if(nombre.value!="" && comprobarEmail(email.value) && comentarioNuevo.value!=""){
-        //Se inserta el nuevo comentario justo debajo del final de la caja para crear uno.
-        filtroPalabras(); // Por si la ultima palabra es una palabrota
-        //InnerHTML para crear un nuevo comentario
-        template.innerHTML="<div class=\"nombre-comentario\">"+
-                                nombre.value+
-                            "</div>"+
-                            "<div class=\"comentario-email\">"+
-                                email.value+
-                            "</div>"+
-                            "<div class=\"fecha\">"+
-                                obtenerFechaActual()+
-                            "</div>"+
-                            "<div class=\"contenido-comentario\">"+
-                                comentarioNuevo.value+
-                            "</div>";
-
-        document.getElementById("caja-comentarios").insertBefore(template, comentarios[comentarios.length])
-        nombre.value=email.value=comentarioNuevo.value="" // reseteo
-    }
-    else{
-        alert("Uno o varios campos están vacíos o son inválidos")
-    }
-}
-
-//Funcion que comprueba palabrotas de un array de strings
-function filtroPalabras(){
-    var texto=document.getElementById("comentario-nuevo");
-    var palabras=["muere", "imbecil", "puta", "mierda", "joder", "zorra", "idiota", "tonto", "culo"]
-
-    // Filtramos las palabras de la siguiente forma: idiota => i*****
-    palabras.forEach(
-        (aux)=>{
-            let regex = new RegExp(aux,"ig");
-            texto.value = texto.value.replace(regex, (match) => {
-                return match[0]+ "*".repeat(match.length - 1);
-            });
-        }
-    )
-}
-
-// Los listener
 botonComentarios.addEventListener("click", expandirComentarios);
 botonSubmit.addEventListener("click", subirComentario);
 zonaTextoNuevoComentario.addEventListener("keypress", filtroPalabras)
