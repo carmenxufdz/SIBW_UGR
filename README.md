@@ -1,5 +1,5 @@
 # Practicas SIBW - UGR
-Este repositorio contiene las prácticas realizadas para la asignatura Desarrollo de Sistemas de Información Basados en Web. En estas prácticas se van implementando diferentes funcionalidades a la misma página, empezando por HTMP, CSS y Javascript, para terminar por PHP y AJAX. La implementación del código, así como el diseño escogido, es de creación propia.
+Este repositorio contiene las prácticas realizadas para la asignatura Desarrollo de Sistemas de Información Basados en Web de la Universidad de Granada (UGR) del curso 2023/24. En estas prácticas se van implementando diferentes funcionalidades a la misma página, empezando por HTMP, CSS y Javascript, para terminar por PHP y AJAX. La implementación del código, así como el diseño escogido, es de creación propia.
 
 ## Práctica 1: HTML y CSS
 El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a saber:
