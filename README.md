@@ -10,5 +10,8 @@ El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a s
     - Una zona principal donde se mostrarán fotos de las actividades de montaña junto con su nombre
     - Un pie con alguna nota de _Copyright_
 
-
 ![Figura 1](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.jpg)
+
+Decidí hacerlo minimalista, y he de decir que para ser la primera vez que trabajo con HTML y CSS estoy bastante contenta con el resultado.
+
+![Portada](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/portada.jpg)
