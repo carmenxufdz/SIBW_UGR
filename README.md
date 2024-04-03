@@ -33,6 +33,8 @@ En el menú horizontal, decidí crear un sub-menú desplegable para las activida
 
 ![Portada](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/portada.jpg)
 
+![Actividad](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/actividad.jpg)
+
 Para actividad_imprimir.html utilizo un CSS diferente y propio para crear  un estilo de hoja de imprenta. Se usan fuentes más legibles y todo está en blanco y negro, incluido el logo.
 
 ![Imprimi](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/imprimir.jpg)
