@@ -37,7 +37,35 @@ En el menú horizontal, decidí crear un sub-menú desplegable para las activida
 
 Para actividad_imprimir.html utilizo un CSS diferente y propio para crear  un estilo de hoja de imprenta. Se usan fuentes más legibles y todo está en blanco y negro, incluido el logo.
 
-![Imprimi](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/imprimir.jpg)
-
+![Imprimir](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/imprimir.jpg)
 
 ## Práctica 2: Javascript
+El objetivo de esta práctica es el diseño de un espacio para comentarios que los usuarios del sitio pueden hacer asociados a cada uno de las actividades mostradas en el sitio. Debe tener la siguiente funcionalidad:
+* El panel de comentarios debe estar oculto en un lateral, y desplegarse al pulsar un botón
+* Cuando se despliegue, deberá contar con dos comentarios predefinidos (como si hubieran sido introducidos por usuarios anteriores)
+* Cada comentario tendrá autor, fecha y hora del comentario y texto del comentario
+* Habrá un formulario con los siguientes campos:
+    - Nombre
+    - Email
+    - Texto del comentario
+    - Botón de enviar
+* Al pulsar el botón de enviar, el texto del comentario se incluirá de forma similar a los ya existentes a continuación de estos usando JavaScript. Dichos comentarios desaparecerán al recargar la página.
+* Al pulsar el botón de enviar, antes de incluir el texto del comentario se comprobará que todos los campos han sido rellenados. En caso negativo se avisará y no se incluirá el comentario. Además se realizará una validación de email
+* Conforme el usuario escribe el comentario, el sistema detectará mediante JavaScript la apariciónde palabras "prohibidas". Cada uno de los caracteres de cada palabra prohibida se sustituirá por un * en tiempo de escritura
+
+Para la resolución de esta práctica, tuve que crear e implementar un nuevo CSS con toda la estructura de la sección de comentarios. Para abrir y cerrar la sección, existe un botón "flotante" que se mantendrá a la izquierda de la página, a la derecha de la sección de comentarios.
+
+´´´
+function expandirComentarios(){
+    if(abrir){
+        cajaDesplegable.style.left="0"
+        abrir=false;
+    }
+    else{
+        cajaDesplegable.style.left="calc(-1 * min(600px, 55vw))"
+        abrir=true;
+    }
+}
+´´´
+
+![Imprimi](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P2/comentario.jpg)

@@ -87,6 +87,7 @@ function subirComentario(){
     // copio la estructura del comentario
     var template=comentarios[0].cloneNode(true)
 
+
     if(nombre.value!="" && comprobarEmail(email.value) && comentarioNuevo.value!=""){
         //Se inserta el nuevo comentario justo debajo del final de la caja para crear uno.
         filtroPalabras(); // Por si la ultima palabra es una palabrota
@@ -104,7 +105,7 @@ function subirComentario(){
                                 comentarioNuevo.value+
                             "</div>";
 
-        document.getElementById("caja-comentarios").insertBefore(template, comentarios[0])
+        document.getElementById("caja-comentarios").insertBefore(template, comentarios[comentarios.length])
         nombre.value=email.value=comentarioNuevo.value="" // reseteo
     }
     else{
