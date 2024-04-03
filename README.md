@@ -10,4 +10,4 @@ El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a s
         - Un pie con alguna nota de _Copyright_
 
 
-![Figura 1](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.png)
+![Figura 1](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.jpg)
