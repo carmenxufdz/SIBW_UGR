@@ -28,7 +28,6 @@ El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a s
 <p align="center">
   <img src="https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.jpg" alt="Figura 1"/>
 </p>
-![Figura 1](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.jpg)
 
 Para realizar lo que sería la estructura general de la página web: cabecera, menú, cuerpo y pie de página; utilicé un CSS en el que implemento cada uno de estas partes de la página web. Este CSS se utiliza tanto en la portada.html como en actividad.html. Además, para cada página implementé su propio CSS para el manejo del grid y la distribución de la página. 
 
