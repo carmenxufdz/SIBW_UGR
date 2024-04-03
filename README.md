@@ -55,7 +55,7 @@ El objetivo de esta práctica es el diseño de un espacio para comentarios que l
 
 Para la resolución de esta práctica, tuve que crear e implementar un nuevo CSS con toda la estructura de la sección de comentarios. Para abrir y cerrar la sección, existe un botón "flotante" que se mantendrá a la izquierda de la página, a la derecha de la sección de comentarios.
 
-´´´
+```
 function expandirComentarios(){
     if(abrir){
         cajaDesplegable.style.left="0"
@@ -66,6 +66,6 @@ function expandirComentarios(){
         abrir=true;
     }
 }
-´´´
+```
 
 ![Imprimi](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P2/comentario.jpg)
