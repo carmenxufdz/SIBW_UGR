@@ -12,6 +12,6 @@ El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a s
 
 ![Figura 1](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.jpg)
 
-Decidí hacerlo minimalista, y he de decir que para ser la primera vez que trabajo con HTML y CSS estoy bastante contenta con el resultado.
+Decidí hacerlo minimalista, agregué que algunas de las opciones del menú horizontal fuese u submenú desplegable. He de decir que para ser la primera vez que trabajo con HTML y CSS estoy bastante contenta con el resultado.
 
 ![Portada](https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/portada.jpg)
