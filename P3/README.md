@@ -3,5 +3,5 @@ En esta práctica, pretendemos hacer una primera aproximación a la creación de
 
 PHP es un lenguaje de script del lado del servidor. Esto quiere decir que no es código compilado, sino que es interpretado. Los archivos .php son reconocidos como tales por el servidor HTTP (por ejemplo, Apache), que se encarga de ejecutarlos y generar como resultado de la petición HTTP la salida de los scripts. El cliente no ve el código PHP, sino la salida que generan los scripts (usualmente código HTML).
 
-## Descripción de la práctica
+## Descripción de la Práctica
 En las páginas web generadas en las prácticas anteriores, hay numeroso código que se repite y que se puede delimitar bastante bien (por ejemplo, código común para la cabecera, el pie, menús...). Para generar distinto contenido con un mismo script (por ejemplo, mostrar las distintas páginas de las distintas actividades) podemos utilizar las variables GET del protocolo HTTP, tal y como se explica en la teoría. Por ejemplo, la URL: http://localhost/actividad.php?id=12 invocará el script actividad.php con la variable id=12. Al detectar el script dicha variable, se buscará en la base de datos la información sobre dicha actividad y se mostrará de manera dinámica renderizando una plantilla.
