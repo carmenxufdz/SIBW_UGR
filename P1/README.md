@@ -1,4 +1,6 @@
 # Práctica 1: HTML y CSS
+
+
 El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a saber:
 
 * portada.html: La portadad de un sitio web que muestre información sobre posibles actividades en la montaña. El aspecto de la página debe ser similar al planteado en la figura 1:
@@ -26,6 +28,8 @@ El objetivo de esta práctica es el diseño de tres páginas con HTML + CSS, a s
   <img src="https://github.com/carmenxufdz/SIBW_UGR/blob/main/P1/esquema.jpg" alt="Figura 1"/>
 </p>
 
+
+## Resolución de la Práctica
 Para realizar lo que sería la estructura general de la página web: cabecera, menú, cuerpo y pie de página; utilicé un CSS en el que implemento cada uno de estas partes de la página web. Este CSS se utiliza tanto en la portada.html como en actividad.html. Además, para cada página implementé su propio CSS para el manejo del grid y la distribución de la página. 
 
 En el menú horizontal, decidí crear un sub-menú desplegable para las actividades, y que al clickear en estas te llevasen también a la página de cada actividad; el menú Home que te llevará a portada.html; otro sub-menú desplegable para una página extra que creé de Montañar y un último menú no funcional para lo que sería una página de contacto.

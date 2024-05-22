@@ -1,4 +1,6 @@
 # Práctica 2: Javascript
+
+## Descripción de la Práctica
 El objetivo de esta práctica es el diseño de un espacio para comentarios que los usuarios del sitio pueden hacer asociados a cada uno de las actividades mostradas en el sitio. Debe tener la siguiente funcionalidad:
 * El panel de comentarios debe estar oculto en un lateral, y desplegarse al pulsar un botón
 * Cuando se despliegue, deberá contar con dos comentarios predefinidos (como si hubieran sido introducidos por usuarios anteriores)
@@ -12,6 +14,8 @@ El objetivo de esta práctica es el diseño de un espacio para comentarios que l
 * Al pulsar el botón de enviar, antes de incluir el texto del comentario se comprobará que todos los campos han sido rellenados. En caso negativo se avisará y no se incluirá el comentario. Además se realizará una validación de email
 * Conforme el usuario escribe el comentario, el sistema detectará mediante JavaScript la apariciónde palabras "prohibidas". Cada uno de los caracteres de cada palabra prohibida se sustituirá por un * en tiempo de escritura
 
+
+## Resolución de la Práctica
 Para la resolución de esta práctica, tuve que crear e implementar un nuevo CSS con toda la estructura de la sección de comentarios. Para abrir y cerrar la sección, existe un botón "flotante" que se mantendrá a la izquierda de la página, a la derecha de la sección de comentarios y que al pulsarlo, activará la siguiente función.
 
 ```
