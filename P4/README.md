@@ -1,4 +1,6 @@
 # Práctica 4: PHP (II)
+
+## Descripción de la Práctica
 En esta práctica se pretende dotar a la web de una interfaz que permita editar toda la información del sistem sin tener que acceder en ningún momento a los datos de MySQL a través de la consola u herramientas tipo phpmyadmin. Para ello habrá que desarrollar un "panel de control" que, dependeiendo del tipo de usuario que se haya conectado al sistema, mostrará formularios e información como la que se detalla a continuación
 
 * <b>Tipos de usuarios:</b>
