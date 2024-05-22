@@ -8,7 +8,7 @@
 {% block central %}
 <div class="extra">
     <h2>Edición de actividad:</h2>
-    <form action="editarActividad.php" method="POST">
+    <form action="editarActividad.php" method="POST"  enctype="multipart/form-data">
         <input type="text" name="idActividad" class="oculto" value="{{actividad.actividades.id}}">
         <p>Nombre: <input type="text" name="nombre" value="{{actividad.actividades.nombre}}"></p>
         <p>Precio: <input type="text" name="precio" value="{{actividad.actividades.precio}}"></p>
